@@ -8,12 +8,6 @@ import FounderMemo from '@/components/FounderMemo';
 import LogosMarquee from '@/components/LogosMarquee';
 
 export default function Home() {
-  const [isNewsletterOpen, setIsNewsletterOpen] = useState(true);
-
-  const handleCloseNewsletter = () => {
-    setIsNewsletterOpen(false);
-  };
-
   return (
     <div className="relative min-h-screen bg-gray-100">
       <div className="flex h-screen bg-gray-100 overflow-hidden">
@@ -169,37 +163,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Newsletter Modal Overlay */}
-      {isNewsletterOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-8 max-w-md mx-4">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Newsletter</h2>
-              <p className="text-gray-600 mb-4">Subscribe to get updates on new projects and insights.</p>
-              <div className="space-y-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-full"
-                />
-                <button 
-                  onClick={handleCloseNewsletter}
-                  className="w-full px-4 py-2 bg-primary-pink text-white font-bold rounded-full"
-                >
-                  Subscribe
-                </button>
-                <button 
-                  onClick={handleCloseNewsletter}
-                  className="w-full px-4 py-2 text-gray-600"
-                >
-                  Skip
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
