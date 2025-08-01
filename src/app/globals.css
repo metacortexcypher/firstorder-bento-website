@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary-pink: #FF1493;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-600: #666666;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #ECECEC;
+  --color-gray-400: #CCCCCC;
+
+  --font-sans: 'Inter', sans-serif;
+
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-[var(--color-gray-200)] text-[var(--color-black)] font-normal text-base;
+    line-height: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-[var(--color-black)] no-underline;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  /* Specific global styles based on observation */
+  .button-primary {
+    @apply bg-[var(--color-primary-pink)] text-[var(--color-white)] px-4 py-2 rounded-md font-bold transition-colors duration-200;
+  }
+
+  .text-highlight {
+    @apply text-[var(--color-primary-pink)];
+  }
+}
