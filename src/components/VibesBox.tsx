@@ -52,7 +52,7 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
 
   return (
     <div className={`relative w-full h-full flex flex-col ${className}`}>
-      <div className="relative flex-1 w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm">
+      <div className="relative flex-1 w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm min-h-[200px] sm:min-h-[300px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -67,19 +67,21 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
               alt={vibesImages[currentIndex].alt}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 35vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 35vw"
               priority={currentIndex === 0}
               unoptimized
             />
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="flex justify-center mt-4 space-x-2 flex-shrink-0">
+      <div className="flex justify-center mt-2 sm:mt-4 space-x-1 sm:space-x-2 flex-shrink-0">
         {vibesImages.map((_, index) => (
           <div
             key={index}
-            className={`h-1 transition-all duration-300 ${
-              index === currentIndex ? "w-8 bg-[#FF1493]" : "w-1 bg-[#CCCCCC]"
+            className={`h-0.5 sm:h-1 transition-all duration-300 ${
+              index === currentIndex 
+                ? "w-4 sm:w-8 bg-[#FF1493]" 
+                : "w-0.5 sm:w-1 bg-[#CCCCCC]"
             }`}
           />
         ))}
