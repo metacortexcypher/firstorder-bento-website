@@ -164,7 +164,7 @@ export default function Home() {
               <div className="w-full lg:w-[60%] min-h-[300px] lg:h-full">
                 <FoundingPrinciples />
               </div>
-              <div className="w-full lg:w-[35%] min-h-[250px] lg:h-full">
+              <div className="w-full lg:w-[35%] min-h-[200px] sm:min-h-[250px] lg:h-full">
                 <VibesBox />
               </div>
             </div>

@@ -52,7 +52,7 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
 
   return (
     <div className={`relative w-full h-full flex flex-col ${className}`}>
-      <div className="relative flex-1 w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm min-h-[200px] sm:min-h-[300px]">
+      <div className="relative flex-1 w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm min-h-[200px] sm:min-h-[250px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
