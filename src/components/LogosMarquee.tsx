@@ -33,8 +33,15 @@ export const LogosMarquee = () => {
           <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 w-12 h-full bg-gradient-to-l from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           
-          <div className="overflow-hidden">
-            <div className="logo-marquee flex gap-6 items-center">
+          {/* Scroll isolation container */}
+          <div 
+            className="overflow-hidden"
+            style={{
+              contain: 'layout style paint',
+              isolation: 'isolate'
+            }}
+          >
+            <div className="logo-marquee flex gap-6 items-center" style={{ minWidth: 'max-content' }}>
               {/* First set of logos */}
               {logos.map((logo, index) => (
                 <div
@@ -59,25 +66,6 @@ export const LogosMarquee = () => {
               {logos.map((logo, index) => (
                 <div
                   key={`${logo.name}-set2-${index}`}
-                  className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
-                >
-                  <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
-                    logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
-                  }`}>
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      width={64}
-                      height={32}
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-              ))}
-              {/* Third set for extra smooth looping */}
-              {logos.map((logo, index) => (
-                <div
-                  key={`${logo.name}-set3-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${

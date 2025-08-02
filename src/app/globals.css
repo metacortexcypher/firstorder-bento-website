@@ -73,10 +73,17 @@
 
   /* Optimized logo marquee animation */
   .logo-marquee {
-    animation: logo-scroll 40s linear infinite;
+    animation: logo-scroll 30s linear infinite;
     will-change: transform;
     backface-visibility: hidden;
     perspective: 1000px;
+    /* Prevent scroll interference */
+    pointer-events: none;
+    transform: translateZ(0); /* Force hardware acceleration */
+  }
+  
+  .logo-marquee > * {
+    pointer-events: auto; /* Re-enable interactions for logo items */
   }
   
   .logo-marquee:hover {
@@ -85,10 +92,10 @@
   
   @keyframes logo-scroll {
     0% {
-      transform: translateX(0);
+      transform: translateX(0) translateZ(0);
     }
     100% {
-      transform: translateX(-33.333%);
+      transform: translateX(calc(-50% - 3rem)) translateZ(0);
     }
   }
 }
