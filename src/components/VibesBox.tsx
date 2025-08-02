@@ -41,6 +41,7 @@ const vibesImages = [
 
 export const VibesBox = ({ className = "" }: VibesBoxProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,26 +54,43 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
   return (
     <div className={`relative w-full h-full flex flex-col ${className}`}>
       <div className="relative flex-1 w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm min-h-[200px] sm:min-h-[250px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            className="w-full h-full relative"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-          >
-            <Image
-              src={vibesImages[currentIndex].src}
-              alt={vibesImages[currentIndex].alt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 35vw"
-              priority={currentIndex === 0}
-              unoptimized
-            />
-          </motion.div>
-        </AnimatePresence>
+        {!imageError ? (
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              className="w-full h-full relative"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+              <Image
+                src={vibesImages[currentIndex].src}
+                alt={vibesImages[currentIndex].alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 35vw"
+                priority={currentIndex === 0}
+                unoptimized
+                onError={(e) => {
+                  console.log('Image failed to load:', vibesImages[currentIndex].src);
+                  setImageError(true);
+                }}
+              />
+            </motion.div>
+          </AnimatePresence>
+        ) : (
+          /* Fallback content if images don't load */
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+            <div className="text-center p-4">
+              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
+                <span className="text-white text-xl">✨</span>
+              </div>
+              <p className="text-gray-600 text-sm font-medium">First Order Vibes</p>
+              <p className="text-gray-400 text-xs">Building the future</p>
+            </div>
+          </div>
+        )}
       </div>
       <div className="flex justify-center mt-2 sm:mt-4 space-x-1 sm:space-x-2 flex-shrink-0">
         {vibesImages.map((_, index) => (
