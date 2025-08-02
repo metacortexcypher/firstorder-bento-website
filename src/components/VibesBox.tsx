@@ -9,20 +9,32 @@ interface VibesBoxProps {
 
 const vibesImages = [
   {
-    src: "https://images.unsplash.com/photo-1583508085307-0a4d55ecd7e0?w=500&h=300&fit=crop&crop=center",
-    alt: "Creative abstract gradient"
+    src: "/2.png",
+    alt: "First Order Vibes 1"
   },
   {
-    src: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=500&h=300&fit=crop&crop=center",
-    alt: "Minimalist architecture"
+    src: "/3.png",
+    alt: "First Order Vibes 2"
   },
   {
-    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&h=300&fit=crop&crop=center",
-    alt: "Geometric patterns"
+    src: "/4.png",
+    alt: "First Order Vibes 3"
   },
   {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd8b?w=500&h=300&fit=crop&crop=center",
-    alt: "Neon lights"
+    src: "/5.png",
+    alt: "First Order Vibes 4"
+  },
+  {
+    src: "/6.png",
+    alt: "First Order Vibes 5"
+  },
+  {
+    src: "/7.png",
+    alt: "First Order Vibes 6"
+  },
+  {
+    src: "/8.png",
+    alt: "First Order Vibes 7"
   }
 ];
 
