@@ -51,7 +51,7 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
 
   return (
     <div className={`relative w-full h-full flex flex-col ${className}`}>
-      <div className="relative flex-1 w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm min-h-[200px] sm:min-h-[250px]">
+      <div className="relative w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm h-[220px] sm:h-[280px] md:h-[320px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -61,11 +61,17 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
           >
-            {/* Use regular img tag for better mobile compatibility */}
+            {/* Use regular img tag with fixed dimensions to prevent layout shifts */}
             <img
               src={vibesImages[currentIndex].src}
               alt={vibesImages[currentIndex].alt}
               className="w-full h-full object-cover"
+              style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover',
+                objectPosition: 'center' 
+              }}
               onError={(e) => {
                 console.log('Image failed to load:', vibesImages[currentIndex].src);
                 e.currentTarget.style.display = 'none';
@@ -77,7 +83,11 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
             {/* Fallback content - hidden by default */}
             <div 
               className="absolute inset-0 items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200"
-              style={{ display: 'none' }}
+              style={{ 
+                display: 'none',
+                width: '100%',
+                height: '100%'
+              }}
             >
               <div className="text-center p-4">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">

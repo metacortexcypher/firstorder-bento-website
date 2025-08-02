@@ -120,6 +120,11 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Founder Memo - Mobile only, appears right after hero section */}
+        <div className="block lg:hidden w-full border-b border-gray-200 p-3 sm:p-4">
+          <FounderMemo />
+        </div>
+
         {/* Right Column - Mobile: full width, Desktop: 60% */}
         <div className="w-full lg:w-[60vw] h-auto lg:h-screen bg-gray-100 overflow-y-auto">
           <div className="p-3 sm:p-4 space-y-3 sm:space-y-4">
@@ -188,13 +193,6 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
               <div className="col-span-1">
                 <ExperimentsAndLabs />
-              </div>
-            </div>
-
-            {/* Row 3 - Founder Memo - Mobile and tablet only */}
-            <div className="lg:hidden grid grid-cols-1 gap-3 sm:gap-4">
-              <div className="col-span-1">
-                <FounderMemo />
               </div>
             </div>
 
