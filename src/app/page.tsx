@@ -6,8 +6,11 @@ import { VibesBox } from '@/components/VibesBox';
 import ExperimentsAndLabs from '@/components/ExperimentsLabs';
 import FounderMemo from '@/components/FounderMemo';
 import LogosMarquee from '@/components/LogosMarquee';
+import JoinModal from '@/components/modals/JoinModal';
 
 export default function Home() {
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen bg-gray-100">
       <div className="flex flex-col lg:flex-row h-auto lg:h-screen bg-gray-100 overflow-hidden">
@@ -24,12 +27,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => setIsJoinModalOpen(true)}
                     className="px-2 sm:px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-sm"
                   >
                     Join
-                  </a>
+                  </button>
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 </div>
               </div>
@@ -73,12 +76,12 @@ export default function Home() {
                 
                 <div className="relative z-10 text-center">
                   <p className="text-xs text-gray-600 mb-2 sm:mb-3 font-medium">Join First Order Community</p>
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => setIsJoinModalOpen(true)}
                     className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-green-500 text-white text-xs font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-md"
                   >
                     WhatsApp
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -159,6 +162,11 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Founder Memo - Top of right column on larger screens */}
+            <div className="hidden lg:block">
+              <FounderMemo />
+            </div>
+
             {/* Row 1 - Founding Principles and Vibes Box - Stack on mobile, side by side on desktop */}
             <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:h-[50vh]">
               <div className="w-full lg:w-[60%] min-h-[300px] lg:h-full">
@@ -176,24 +184,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Row 1.75 - YouTube Video */}
-            <div className="grid grid-cols-1 gap-3 sm:gap-4">
-              <div className="col-span-1">
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-white/30 p-3 sm:p-6 relative overflow-hidden">
-                  <div className="relative aspect-video rounded-xl overflow-hidden">
-                    <iframe
-                      src="https://www.youtube.com/embed/sbY5m-OEess?rel=0&modestbranding=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0"
-                      title="First Order Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Row 2 - Experiments and Labs */}
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
               <div className="col-span-1">
@@ -201,8 +191,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Row 3 - Founder Memo */}
-            <div className="grid grid-cols-1 gap-3 sm:gap-4">
+            {/* Row 3 - Founder Memo - Mobile and tablet only */}
+            <div className="lg:hidden grid grid-cols-1 gap-3 sm:gap-4">
               <div className="col-span-1">
                 <FounderMemo />
               </div>
@@ -232,12 +222,12 @@ export default function Home() {
                 
                 <div className="relative z-10 text-center">
                   <p className="text-xs text-gray-600 mb-2 font-medium">Join First Order Community</p>
-                  <a
-                    href="#"
+                  <button
+                    onClick={() => setIsJoinModalOpen(true)}
                     className="inline-block px-3 py-1.5 bg-green-500 text-white text-xs font-bold rounded-full hover:bg-green-600 transition-all duration-300 shadow-md"
                   >
                     WhatsApp
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -276,6 +266,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Join Modal */}
+      <JoinModal 
+        isOpen={isJoinModalOpen} 
+        onClose={() => setIsJoinModalOpen(false)} 
+      />
     </div>
   );
 }

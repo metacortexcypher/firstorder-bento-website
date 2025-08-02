@@ -9,7 +9,12 @@ export const LogosMarquee = () => {
     { name: "Getto", src: "/Getto.png", alt: "Getto" },
     { name: "ShuttlePro", src: "/shuttlepro logo.jpg", alt: "ShuttlePro" },
     { name: "Stikks", src: "/stikks logo.png", alt: "Stikks" },
-    { name: "Vouch", src: "/vouch logo.jpg", alt: "Vouch" }
+    { name: "Vouch", src: "/vouch logo.jpg", alt: "Vouch" },
+    { name: "Vipani", src: "/vipani.svg", alt: "Vipani" },
+    { name: "Chaishots", src: "/chaishots.jpg", alt: "Chaishots" },
+    { name: "Quiklee", src: "/quiklee_india_logo.jpeg", alt: "Quiklee" },
+    { name: "Jurru", src: "/jurru.jpeg", alt: "Jurru" },
+    { name: "Dinebees", src: "/dinebees.jpg", alt: "Dinebees" }
   ];
 
   // Duplicate the logos for seamless infinite scroll
@@ -23,7 +28,7 @@ export const LogosMarquee = () => {
       <div className="relative z-10">
         <div className="text-center mb-4">
           <p className="text-sm font-medium text-gray-300">
-            Trusted by teams at
+            Few of the startups inside First Order
           </p>
         </div>
         
@@ -34,15 +39,15 @@ export const LogosMarquee = () => {
           
           <div className="overflow-hidden">
             <motion.div
-              className="flex gap-8 items-center"
+              className="flex gap-6 items-center"
               animate={{
-                x: [0, -50 * logos.length], // Move by the width of all original logos
+                x: [0, -100 * logos.length], // Smoother animation with better spacing calculation
               }}
               transition={{
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 30,
+                  duration: 40, // Slower, smoother animation
                   ease: "linear",
                 },
               }}
@@ -51,15 +56,17 @@ export const LogosMarquee = () => {
               {duplicatedLogos.map((logo, index) => (
                 <div
                   key={`${logo.name}-${index}`}
-                  className="flex-shrink-0 px-6 py-4 bg-gray-800/60 backdrop-blur-sm rounded-lg border border-gray-600/40 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-700/70 hover:border-gray-500/60"
+                  className="flex-shrink-0 px-4 py-3 bg-gray-800/60 backdrop-blur-sm rounded-lg border border-gray-600/40 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-gray-700/70 hover:border-gray-500/60 min-w-[120px]"
                 >
-                  <div className="relative w-16 h-8 flex items-center justify-center">
+                  <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
+                    logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
+                  }`}>
                     <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={64}
                       height={32}
-                      className="object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-300"
+                      className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                 </div>

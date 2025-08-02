@@ -49,28 +49,47 @@ maybe.`;
 
   return (
     <>
-      {/* Compact View */}
+      {/* Compact View - Minimalistic Design */}
       <div 
         onClick={() => setIsOpen(true)}
-        className="flex items-center justify-between p-6 h-40 bg-gradient-to-br from-gray-50 to-stone-50 border-2 border-gray-300 rounded-lg shadow-sm hover:shadow-lg hover:border-gray-400 transition-all duration-300 ease-in-out hover:-translate-y-1 group cursor-pointer"
+        className="group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-200/80 rounded-3xl transition-all duration-400 ease-out hover:-translate-y-1 cursor-pointer overflow-hidden"
       >
-        <div className="flex flex-col justify-center h-full">
-          <div className="flex items-center mb-2">
-            <FileText className="h-4 w-4 text-gray-600 mr-2" />
-            <h3 className="font-bold text-black tracking-wide text-sm group-hover:text-gray-800 transition-colors duration-300">
-              MEMO FROM THE FOUNDER
+        {/* Subtle colored gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-amber-50/20 to-yellow-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+        
+        {/* Subtle colored accent border */}
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-200/20 via-amber-200/20 to-yellow-200/20 p-px">
+          <div className="w-full h-full bg-white rounded-3xl"></div>
+        </div>
+        
+        <div className="relative flex flex-col justify-center h-full space-y-3 z-10">
+          <div className="flex items-center space-x-3">
+            <div className="w-1.5 h-1.5 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>
+            <h3 className="font-semibold text-gray-900 text-sm tracking-wide">
+              Memo from the Founder
             </h3>
           </div>
-          <p className="text-black text-sm leading-relaxed max-w-sm group-hover:text-gray-700 transition-colors duration-300">
+          
+          <p className="text-gray-600 text-sm leading-relaxed max-w-xs font-normal">
             Raw thoughts, late-night rants, and honest reflections on building something different.
           </p>
-          <div className="mt-2 text-xs text-gray-500 font-medium">
-            Unfiltered • 2:17 AM thoughts
+          
+          <div className="flex items-center space-x-2 text-xs text-gray-400">
+            <span>Unfiltered</span>
+            <div className="w-1 h-1 bg-orange-300/60 rounded-full"></div>
+            <span>2:17 AM</span>
           </div>
         </div>
-        <div className="p-3 bg-gray-100 rounded-full group-hover:bg-gray-200 transition-colors duration-300">
-          <FileText className="h-5 w-5 text-gray-600" />
+        
+        {/* Enhanced icon with colored background */}
+        <div className="relative z-10">
+          <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100/60 rounded-2xl flex items-center justify-center group-hover:from-orange-100 group-hover:to-amber-100 group-hover:border-orange-200/80 transition-all duration-300">
+            <FileText className="w-5 h-5 text-orange-400 group-hover:text-orange-500 transition-colors duration-300" />
+          </div>
         </div>
+        
+        {/* Enhanced accent line with gradient */}
+        <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-orange-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
       </div>
 
       {/* Full Screen Modal */}
