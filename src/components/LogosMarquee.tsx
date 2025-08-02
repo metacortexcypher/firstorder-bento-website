@@ -38,7 +38,7 @@ export const LogosMarquee = () => {
               {/* First set of logos */}
               {logos.map((logo, index) => (
                 <div
-                  key={`${logo.name}-${index}`}
+                  key={`${logo.name}-set1-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
@@ -55,10 +55,29 @@ export const LogosMarquee = () => {
                   </div>
                 </div>
               ))}
-              {/* Duplicate set for seamless loop */}
+              {/* Second set for seamless loop */}
               {logos.map((logo, index) => (
                 <div
-                  key={`${logo.name}-duplicate-${index}`}
+                  key={`${logo.name}-set2-${index}`}
+                  className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
+                >
+                  <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
+                    logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
+                  }`}>
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={64}
+                      height={32}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+              {/* Third set for extra smooth looping */}
+              {logos.map((logo, index) => (
+                <div
+                  key={`${logo.name}-set3-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${

@@ -73,7 +73,7 @@
 
   /* Optimized logo marquee animation */
   .logo-marquee {
-    animation: logo-scroll 30s linear infinite;
+    animation: logo-scroll 40s linear infinite;
     will-change: transform;
     backface-visibility: hidden;
     perspective: 1000px;
@@ -88,7 +88,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-33.333%);
     }
   }
 }
