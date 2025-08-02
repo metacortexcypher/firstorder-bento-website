@@ -70,4 +70,25 @@
   .text-highlight {
     @apply text-[var(--color-primary-pink)];
   }
+
+  /* Optimized logo marquee animation */
+  .logo-marquee {
+    animation: logo-scroll 30s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  .logo-marquee:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes logo-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
