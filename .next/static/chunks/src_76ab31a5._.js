@@ -1499,13 +1499,8 @@ const LogosMarquee = ()=>{
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "overflow-hidden",
                                 style: {
-                                    contain: 'size layout style paint',
-                                    isolation: 'isolate',
-                                    transform: 'translate3d(0, 0, 0)',
                                     height: 'auto',
-                                    minHeight: '80px',
-                                    touchAction: 'manipulation',
-                                    overscrollBehavior: 'none'
+                                    minHeight: '80px'
                                 },
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "logo-marquee flex gap-6 items-center",
@@ -1513,7 +1508,9 @@ const LogosMarquee = ()=>{
                                         logos.map((logo, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105",
                                                 style: {
-                                                    display: 'flex'
+                                                    display: 'flex',
+                                                    opacity: 1,
+                                                    visibility: 'visible'
                                                 },
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: `relative w-16 h-8 flex items-center justify-center mx-auto ${logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""}`,
@@ -1526,27 +1523,31 @@ const LogosMarquee = ()=>{
                                                         priority: index < 3,
                                                         style: {
                                                             maxWidth: '100%',
-                                                            height: 'auto'
+                                                            height: 'auto',
+                                                            opacity: 1,
+                                                            visibility: 'visible'
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/LogosMarquee.tsx",
-                                                        lineNumber: 60,
+                                                        lineNumber: 59,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LogosMarquee.tsx",
-                                                    lineNumber: 57,
+                                                    lineNumber: 56,
                                                     columnNumber: 19
                                                 }, this)
                                             }, `${logo.name}-set1-${index}`, false, {
                                                 fileName: "[project]/src/components/LogosMarquee.tsx",
-                                                lineNumber: 52,
+                                                lineNumber: 47,
                                                 columnNumber: 17
                                             }, this)),
                                         logos.map((logo, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105",
                                                 style: {
-                                                    display: 'flex'
+                                                    display: 'flex',
+                                                    opacity: 1,
+                                                    visibility: 'visible'
                                                 },
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: `relative w-16 h-8 flex items-center justify-center mx-auto ${logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""}`,
@@ -1558,27 +1559,29 @@ const LogosMarquee = ()=>{
                                                         className: "object-contain",
                                                         style: {
                                                             maxWidth: '100%',
-                                                            height: 'auto'
+                                                            height: 'auto',
+                                                            opacity: 1,
+                                                            visibility: 'visible'
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/LogosMarquee.tsx",
-                                                        lineNumber: 82,
+                                                        lineNumber: 90,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/LogosMarquee.tsx",
-                                                    lineNumber: 79,
+                                                    lineNumber: 87,
                                                     columnNumber: 19
                                                 }, this)
                                             }, `${logo.name}-set2-${index}`, false, {
                                                 fileName: "[project]/src/components/LogosMarquee.tsx",
-                                                lineNumber: 74,
+                                                lineNumber: 78,
                                                 columnNumber: 17
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LogosMarquee.tsx",
-                                    lineNumber: 49,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {

@@ -33,17 +33,12 @@ export const LogosMarquee = () => {
           <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 w-12 h-full bg-gradient-to-l from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           
-          {/* Maximum scroll isolation container */}
+          {/* Simplified container for visibility */}
           <div 
             className="overflow-hidden"
             style={{
-              contain: 'size layout style paint',
-              isolation: 'isolate',
-              transform: 'translate3d(0, 0, 0)',
               height: 'auto',
-              minHeight: '80px',
-              touchAction: 'manipulation',
-              overscrollBehavior: 'none'
+              minHeight: '80px'
             }}
           >
             <div className="logo-marquee flex gap-6 items-center">
@@ -52,7 +47,11 @@ export const LogosMarquee = () => {
                 <div
                   key={`${logo.name}-set1-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
-                  style={{ display: 'flex' }}
+                  style={{ 
+                    display: 'flex',
+                    opacity: 1,
+                    visibility: 'visible'
+                  }}
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
                     logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
@@ -64,7 +63,12 @@ export const LogosMarquee = () => {
                       height={32}
                       className="object-contain"
                       priority={index < 3} // Prioritize first few images
-                      style={{ maxWidth: '100%', height: 'auto' }}
+                      style={{ 
+                        maxWidth: '100%', 
+                        height: 'auto',
+                        opacity: 1,
+                        visibility: 'visible'
+                      }}
                     />
                   </div>
                 </div>
@@ -74,7 +78,11 @@ export const LogosMarquee = () => {
                 <div
                   key={`${logo.name}-set2-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
-                  style={{ display: 'flex' }}
+                  style={{ 
+                    display: 'flex',
+                    opacity: 1,
+                    visibility: 'visible'
+                  }}
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
                     logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
@@ -85,7 +93,12 @@ export const LogosMarquee = () => {
                       width={64}
                       height={32}
                       className="object-contain"
-                      style={{ maxWidth: '100%', height: 'auto' }}
+                      style={{ 
+                        maxWidth: '100%', 
+                        height: 'auto',
+                        opacity: 1,
+                        visibility: 'visible'
+                      }}
                     />
                   </div>
                 </div>

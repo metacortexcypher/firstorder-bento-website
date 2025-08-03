@@ -430,21 +430,18 @@
     will-change: transform;
     backface-visibility: hidden;
     pointer-events: none;
-    z-index: 1;
-    contain: size layout style paint;
-    isolation: isolate;
+    opacity: 1;
+    visibility: visible;
     align-items: center;
     animation: 30s linear infinite logo-scroll;
     display: flex;
-    position: relative;
-    transform: translate3d(0, 0, 0);
   }
 
   .logo-marquee > * {
     pointer-events: auto;
-    will-change: auto;
+    opacity: 1;
+    visibility: visible;
     flex-shrink: 0;
-    transform: translate3d(0, 0, 0);
   }
 
   .logo-marquee:hover {
@@ -452,37 +449,28 @@
   }
 
   .logo-marquee-container {
-    contain: strict;
-    isolation: isolate;
-    touch-action: manipulation;
-    overscroll-behavior: none;
-    will-change: scroll-position;
     overflow: visible;
-    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
   }
 
   @keyframes logo-scroll {
     0% {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0);
     }
 
     100% {
-      transform: translate3d(calc(-50% - 3rem), 0, 0);
+      transform: translateX(calc(-50% - 3rem));
     }
   }
 
   .right-column-scroll {
     scroll-behavior: smooth;
-    contain: layout style;
     overflow-y: auto;
-    transform: translate3d(0, 0, 0);
   }
 
   .animate-optimized {
-    contain: layout style;
     will-change: transform;
     backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
   }
 }
 

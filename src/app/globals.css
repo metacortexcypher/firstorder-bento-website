@@ -71,76 +71,57 @@
     @apply text-[var(--color-primary-pink)];
   }
 
-  /* Completely isolated logo marquee animation */
+  /* Simplified logo marquee animation for visibility */
   .logo-marquee {
     animation: logo-scroll 30s linear infinite;
-    /* Complete isolation from scroll thread */
-    will-change: transform;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    pointer-events: none;
-    /* Force own layer */
-    position: relative;
-    z-index: 1;
-    /* Prevent any scroll interference */
-    contain: size layout style paint;
-    isolation: isolate;
     display: flex;
     align-items: center;
+    /* Basic performance optimizations */
+    will-change: transform;
+    backface-visibility: hidden;
+    /* Ensure logos are visible */
+    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
   }
   
   .logo-marquee > * {
     pointer-events: auto;
-    transform: translate3d(0, 0, 0);
-    will-change: auto;
     flex-shrink: 0;
+    opacity: 1;
+    visibility: visible;
   }
   
   .logo-marquee:hover {
     animation-play-state: paused;
   }
   
-  /* Container with maximum scroll isolation */
+  /* Simplified container */
   .logo-marquee-container {
-    /* Complete containment */
-    contain: strict;
-    isolation: isolate;
-    /* Force GPU layer */
-    transform: translate3d(0, 0, 0);
-    /* Prevent scroll events from propagating to animation */
+    /* Basic containment without breaking visibility */
+    transform: translateZ(0);
     overflow: visible;
-    /* Disable any potential scroll interactions */
-    touch-action: manipulation;
-    overscroll-behavior: none;
-    /* Critical: prevent layout/paint during scroll */
-    will-change: scroll-position;
   }
   
-  /* Use transform3d for better performance */
+  /* Simple transform animation */
   @keyframes logo-scroll {
     0% {
-      transform: translate3d(0, 0, 0);
+      transform: translateX(0);
     }
     100% {
-      transform: translate3d(calc(-50% - 3rem), 0, 0);
+      transform: translateX(calc(-50% - 3rem));
     }
   }
   
   /* Ensure smooth scrolling in right column */
   .right-column-scroll {
-    /* Smooth scrolling optimization */
     overflow-y: auto;
     scroll-behavior: smooth;
-    /* Prevent scroll interference */
-    contain: layout style;
-    transform: translate3d(0, 0, 0);
   }
   
-  /* Optimize all animated elements for better scroll performance */
+  /* Basic animation optimization */
   .animate-optimized {
-    contain: layout style;
     will-change: transform;
-    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
   }
 }
