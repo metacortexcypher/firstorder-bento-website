@@ -17,7 +17,7 @@ export const LogosMarquee = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-gray-900/90 to-black/80 rounded-2xl shadow-2xl border border-gray-700/50 p-6 relative overflow-hidden">
+    <div className="bg-gradient-to-r from-gray-900/90 to-black/80 rounded-2xl shadow-2xl border border-gray-700/50 p-6 relative overflow-hidden logo-marquee-container">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-gray-800/20 via-transparent to-gray-800/20 pointer-events-none"></div>
       
@@ -33,20 +33,26 @@ export const LogosMarquee = () => {
           <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 w-12 h-full bg-gradient-to-l from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           
-          {/* Scroll isolation container */}
+          {/* Maximum scroll isolation container */}
           <div 
             className="overflow-hidden"
             style={{
-              contain: 'layout style paint',
-              isolation: 'isolate'
+              contain: 'size layout style paint',
+              isolation: 'isolate',
+              transform: 'translate3d(0, 0, 0)',
+              height: 'auto',
+              minHeight: '80px',
+              touchAction: 'manipulation',
+              overscrollBehavior: 'none'
             }}
           >
-            <div className="logo-marquee flex gap-6 items-center" style={{ minWidth: 'max-content' }}>
+            <div className="logo-marquee flex gap-6 items-center">
               {/* First set of logos */}
               {logos.map((logo, index) => (
                 <div
                   key={`${logo.name}-set1-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
+                  style={{ display: 'flex' }}
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
                     logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
@@ -58,6 +64,7 @@ export const LogosMarquee = () => {
                       height={32}
                       className="object-contain"
                       priority={index < 3} // Prioritize first few images
+                      style={{ maxWidth: '100%', height: 'auto' }}
                     />
                   </div>
                 </div>
@@ -67,6 +74,7 @@ export const LogosMarquee = () => {
                 <div
                   key={`${logo.name}-set2-${index}`}
                   className="flex-shrink-0 px-4 py-3 bg-gray-800/60 rounded-lg border border-gray-600/40 shadow-lg min-w-[120px] transition-transform duration-200 hover:scale-105"
+                  style={{ display: 'flex' }}
                 >
                   <div className={`relative w-16 h-8 flex items-center justify-center mx-auto ${
                     logo.name === "Vipani" ? "bg-white rounded-md p-1" : ""
@@ -77,6 +85,7 @@ export const LogosMarquee = () => {
                       width={64}
                       height={32}
                       className="object-contain"
+                      style={{ maxWidth: '100%', height: 'auto' }}
                     />
                   </div>
                 </div>

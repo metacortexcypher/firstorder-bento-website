@@ -71,31 +71,76 @@
     @apply text-[var(--color-primary-pink)];
   }
 
-  /* Optimized logo marquee animation */
+  /* Completely isolated logo marquee animation */
   .logo-marquee {
     animation: logo-scroll 30s linear infinite;
+    /* Complete isolation from scroll thread */
     will-change: transform;
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    perspective: 1000px;
-    /* Prevent scroll interference */
     pointer-events: none;
-    transform: translateZ(0); /* Force hardware acceleration */
+    /* Force own layer */
+    position: relative;
+    z-index: 1;
+    /* Prevent any scroll interference */
+    contain: size layout style paint;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
   }
   
   .logo-marquee > * {
-    pointer-events: auto; /* Re-enable interactions for logo items */
+    pointer-events: auto;
+    transform: translate3d(0, 0, 0);
+    will-change: auto;
+    flex-shrink: 0;
   }
   
   .logo-marquee:hover {
     animation-play-state: paused;
   }
   
+  /* Container with maximum scroll isolation */
+  .logo-marquee-container {
+    /* Complete containment */
+    contain: strict;
+    isolation: isolate;
+    /* Force GPU layer */
+    transform: translate3d(0, 0, 0);
+    /* Prevent scroll events from propagating to animation */
+    overflow: visible;
+    /* Disable any potential scroll interactions */
+    touch-action: manipulation;
+    overscroll-behavior: none;
+    /* Critical: prevent layout/paint during scroll */
+    will-change: scroll-position;
+  }
+  
+  /* Use transform3d for better performance */
   @keyframes logo-scroll {
     0% {
-      transform: translateX(0) translateZ(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(calc(-50% - 3rem)) translateZ(0);
+      transform: translate3d(calc(-50% - 3rem), 0, 0);
     }
+  }
+  
+  /* Ensure smooth scrolling in right column */
+  .right-column-scroll {
+    /* Smooth scrolling optimization */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    /* Prevent scroll interference */
+    contain: layout style;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Optimize all animated elements for better scroll performance */
+  .animate-optimized {
+    contain: layout style;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
   }
 }

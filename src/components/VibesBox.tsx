@@ -51,7 +51,14 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
 
   return (
     <div className={`relative w-full h-full flex flex-col ${className}`}>
-      <div className="relative w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm h-[220px] sm:h-[280px] md:h-[320px]">
+      <div 
+        className="relative w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm h-[220px] sm:h-[280px] md:h-[320px] animate-optimized"
+        style={{
+          contain: 'layout style paint',
+          isolation: 'isolate',
+          transform: 'translateZ(0)'
+        }}
+      >
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -59,7 +66,17 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ 
+              duration: 0.6, 
+              ease: "easeInOut",
+              // Optimize for performance
+              type: "tween"
+            }}
+            style={{
+              contain: 'layout style paint',
+              transform: 'translateZ(0)',
+              backfaceVisibility: 'hidden'
+            }}
           >
             {/* Use regular img tag with fixed dimensions to prevent layout shifts */}
             <img
@@ -70,7 +87,9 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
                 width: '100%', 
                 height: '100%', 
                 objectFit: 'cover',
-                objectPosition: 'center' 
+                objectPosition: 'center',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden'
               }}
               onError={(e) => {
                 console.log('Image failed to load:', vibesImages[currentIndex].src);
