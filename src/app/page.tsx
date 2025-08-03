@@ -7,6 +7,7 @@ import ExperimentsAndLabs from '@/components/ExperimentsLabs';
 import FounderMemo from '@/components/FounderMemo';
 import LogosMarquee from '@/components/LogosMarquee';
 import JoinModal from '@/components/modals/JoinModal';
+import FAQSection from '@/components/FAQSection';
 
 export default function Home() {
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
@@ -154,6 +155,13 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
               <div className="col-span-1">
                 <ExperimentsAndLabs />
+              </div>
+            </div>
+
+            {/* Row 3 - FAQ Section */}
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              <div className="col-span-1">
+                <FAQSection />
               </div>
             </div>
 
