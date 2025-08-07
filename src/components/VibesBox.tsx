@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface VibesBoxProps {
   className?: string;
@@ -52,7 +53,7 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
   return (
     <div className={`relative w-full h-full flex flex-col ${className}`}>
       <div 
-        className="relative w-full rounded-lg overflow-hidden bg-[#F5F5F5] shadow-sm h-[220px] sm:h-[280px] md:h-[320px] animate-optimized"
+        className="relative w-full rounded-2xl overflow-hidden bg-[#F5F5F5] shadow-sm h-full animate-optimized"
         style={{
           contain: 'layout style paint',
           isolation: 'isolate',
@@ -78,24 +79,24 @@ export const VibesBox = ({ className = "" }: VibesBoxProps) => {
               backfaceVisibility: 'hidden'
             }}
           >
-            {/* Use regular img tag with fixed dimensions to prevent layout shifts */}
-            <img
+            {/* Use Next.js Image component with fixed dimensions */}
+            <Image
               src={vibesImages[currentIndex].src}
               alt={vibesImages[currentIndex].alt}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
               style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover',
                 objectPosition: 'center',
                 transform: 'translateZ(0)',
                 backfaceVisibility: 'hidden'
               }}
+              priority={currentIndex === 0} // Prioritize first image
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 35vw, 35vw"
               onError={(e) => {
                 console.log('Image failed to load:', vibesImages[currentIndex].src);
                 e.currentTarget.style.display = 'none';
                 // Show fallback content
-                const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                const fallback = e.currentTarget.parentElement?.nextElementSibling as HTMLElement;
                 if (fallback) fallback.style.display = 'flex';
               }}
             />

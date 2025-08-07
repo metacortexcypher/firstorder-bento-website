@@ -54,11 +54,11 @@ export default function ExperimentsAndLabs() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-white/80 to-gray-50/60 backdrop-blur-xl rounded-2xl shadow-lg border border-white/30 p-6 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-white/80 to-gray-50/60 backdrop-blur-xl rounded-2xl shadow-lg border border-white/30 p-6 relative overflow-hidden h-full flex flex-col">
       {/* Whiteboard/Kanban style background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:20px_20px] opacity-30 pointer-events-none"></div>
       
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full">
         <div className="mb-6">
           <h2 className="text-xl font-bold text-black/90 tracking-wide mb-2">
             IN PROGRESS
@@ -67,7 +67,7 @@ export default function ExperimentsAndLabs() {
         </div>
 
         {/* Horizontal cards layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 flex-1">
           {experiments.map((experiment, index) => (
             <motion.div
               key={experiment.id}
@@ -76,7 +76,7 @@ export default function ExperimentsAndLabs() {
               transition={{ delay: index * 0.1 }}
               onMouseEnter={() => setHoveredId(experiment.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className="bg-white/70 backdrop-blur-sm border border-gray-200 rounded-xl p-4 hover:shadow-md hover:border-gray-300 transition-all duration-200 group"
+              className="bg-white/70 backdrop-blur-sm border border-gray-200 rounded-2xl p-4 hover:shadow-md hover:border-gray-300 transition-all duration-200 group"
             >
               {/* Header with emoji and status */}
               <div className="flex items-start justify-between mb-3">

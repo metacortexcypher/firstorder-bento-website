@@ -8,23 +8,22 @@ export const FoundingPrinciples = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const principles = [
-    "Think from first principles, not by analogy",
-    "Simplicity is the ultimate sophistication", 
-    "Build for clarity, not complexity",
-    "Question everything, assume nothing",
-    "Focus on first-order effects",
-    "Ship fast, iterate faster",
-    "Data beats opinions",
-    "Constraints breed creativity",
-    "We strive for first-order effects in everything",
-    "If the system doesn't help, bend it or break it",
-    "Do what you have to, but don't give up"
+    "1. Think from First Principles\nDon't copy. Break it down. Rebuild from truth.",
+    "2. Focus on First-Order Effects\nSolve for what actually matters. Ignore noise.",
+    "3. Simplicity Wins\nIf it's confusing, it won't scale. Make it obvious.",
+    "4. Default to Doubt\nQuestion what everyone else accepts. Especially the experts.",
+    "5. Speed is Strategy\nShip before you're ready. Learn in public. Fix it live.",
+    "6. Data > Opinions\nArgue with proof, not ego. Numbers are louder than titles.",
+    "7. Constraints = Power\nSmall teams. Limited time. Tiny budgets. Good. Now build.",
+    "8. Break the System\nIf the rules slow you down, rewrite them. Or ignore them.",
+    "9. Never Settle for Second-Order Thinking\nNo band-aids. No shortcuts. Solve at the root.",
+    "10. Don't Stop. Ever.\nMomentum compounds. When it gets hard, that's the sign you're close."
   ];
 
   return (
     <>
       {/* Compact View - Terminal Style */}
-      <div className="flex items-center justify-between p-4 sm:p-6 lg:p-8 h-full min-h-[250px] sm:min-h-[300px] lg:h-[50vh] bg-gray-900 border border-gray-700 rounded-lg shadow-lg hover:shadow-xl hover:border-gray-600 transition-all duration-300 ease-in-out hover:-translate-y-1 group relative overflow-hidden">
+      <div className="flex items-center justify-between p-4 sm:p-6 lg:p-8 h-full min-h-[250px] sm:min-h-[300px] lg:h-full bg-gray-900 border border-gray-700 rounded-2xl shadow-lg hover:shadow-xl hover:border-gray-600 transition-all duration-300 ease-in-out hover:-translate-y-1 group relative overflow-hidden">
         {/* Subtle grid pattern background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.05)_1px,transparent_0)] [background-size:20px_20px] pointer-events-none"></div>
         
@@ -41,17 +40,17 @@ export const FoundingPrinciples = () => {
             <div className="text-gray-500">{"// Core beliefs that guide us"}</div>
             <div className="flex">
               <span className="text-blue-400 mr-2">1.</span>
-              <span className="text-xs sm:text-sm">Think from first principles</span>
+              <span className="text-xs sm:text-sm">Think from First Principles</span>
             </div>
             <div className="flex">
               <span className="text-blue-400 mr-2">2.</span>
-              <span className="text-xs sm:text-sm">Build for clarity, not complexity</span>
+              <span className="text-xs sm:text-sm">Focus on First-Order Effects</span>
             </div>
             <div className="flex">
               <span className="text-blue-400 mr-2">3.</span>
-              <span className="text-xs sm:text-sm">Ship fast, iterate faster</span>
+              <span className="text-xs sm:text-sm">Simplicity Wins</span>
             </div>
-            <div className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm">{"// Click to view all 11 principles"}</div>
+            <div className="text-gray-500 mt-1 sm:mt-2 text-xs sm:text-sm">{"// Click to view all 10 principles"}</div>
           </div>
         </div>
         <button
@@ -113,22 +112,30 @@ export const FoundingPrinciples = () => {
                     </div>
                     
                     <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
-                      {principles.map((principle, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.15 }}
-                          className="flex items-start space-x-2 sm:space-x-4 text-gray-200 py-1 sm:py-2 hover:bg-gray-800/30 rounded px-1 sm:px-2 transition-all duration-200"
-                        >
-                          <span className="text-blue-400 font-semibold min-w-[2rem] sm:min-w-[3rem] text-right text-sm sm:text-base">
-                            {String(index + 1).padStart(2, '0')}.
-                          </span>
-                          <span className="text-gray-200 leading-relaxed text-sm sm:text-base lg:text-lg">
-                            {principle}
-                          </span>
-                        </motion.div>
-                      ))}
+                      {principles.map((principle, index) => {
+                        const [title, description] = principle.split('\n');
+                        return (
+                          <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.15 }}
+                            className="flex items-start space-x-2 sm:space-x-4 text-gray-200 py-2 sm:py-3 hover:bg-gray-800/30 rounded px-1 sm:px-2 transition-all duration-200"
+                          >
+                            <span className="text-blue-400 font-semibold min-w-[2rem] sm:min-w-[3rem] text-right text-sm sm:text-base mt-1">
+                              {title.split('.')[0]}.
+                            </span>
+                            <div className="flex-1">
+                              <div className="text-green-400 font-semibold text-sm sm:text-base lg:text-lg mb-1">
+                                {title.split('.')[1].trim()}
+                              </div>
+                              <div className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+                                {description}
+                              </div>
+                            </div>
+                          </motion.div>
+                        );
+                      })}
                     </div>
                     
                     <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-700 space-y-4 sm:space-y-6">

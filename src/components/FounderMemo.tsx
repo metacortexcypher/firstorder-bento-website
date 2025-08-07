@@ -52,14 +52,14 @@ maybe.`;
       {/* Compact View - Minimalistic Design */}
       <div 
         onClick={() => setIsOpen(true)}
-        className="group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-200/80 rounded-3xl transition-all duration-400 ease-out hover:-translate-y-1 cursor-pointer overflow-hidden"
+        className="group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-200/80 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-1 cursor-pointer overflow-hidden"
       >
         {/* Subtle colored gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-amber-50/20 to-yellow-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
         
         {/* Subtle colored accent border */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-200/20 via-amber-200/20 to-yellow-200/20 p-px">
-          <div className="w-full h-full bg-white rounded-3xl"></div>
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-200/20 via-amber-200/20 to-yellow-200/20 p-px">
+          <div className="w-full h-full bg-white rounded-2xl"></div>
         </div>
         
         <div className="relative flex flex-col justify-center h-full space-y-3 z-10">

@@ -148,7 +148,7 @@ export const FAQSection = () => {
                 {category.items.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-colors"
+                    className="border border-gray-200 rounded-2xl overflow-hidden hover:border-gray-300 transition-colors"
                   >
                     <button
                       onClick={() => toggleItem(categoryIndex, itemIndex)}

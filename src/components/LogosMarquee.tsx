@@ -17,18 +17,18 @@ export const LogosMarquee = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-gray-900/90 to-black/80 rounded-2xl shadow-2xl border border-gray-700/50 p-6 relative overflow-hidden logo-marquee-container">
+    <div className="bg-gradient-to-r from-gray-900/90 to-black/80 rounded-2xl shadow-2xl border border-gray-700/50 p-4 relative overflow-hidden logo-marquee-container h-full flex flex-col">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-gray-800/20 via-transparent to-gray-800/20 pointer-events-none"></div>
       
-      <div className="relative z-10">
-        <div className="text-center mb-4">
+      <div className="relative z-10 flex flex-col h-full">
+        <div className="text-center mb-3">
           <p className="text-sm font-medium text-gray-300">
             Few of the startups inside First Order
           </p>
         </div>
         
-        <div className="relative">
+        <div className="relative flex-1 flex items-center">
           {/* Gradient overlays for fade effect */}
           <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 w-12 h-full bg-gradient-to-l from-gray-900/90 to-transparent z-10 pointer-events-none"></div>
