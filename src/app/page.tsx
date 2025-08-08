@@ -29,7 +29,7 @@ export default function Home() {
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <button
                     onClick={() => setIsJoinModalOpen(true)}
-                    className="px-2 sm:px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full hover:bg-orange-600 transition-all duration-300 shadow-sm"
+                    className="px-2 sm:px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full hover:bg-orange-600 transition-all duration-300 shadow-sm cursor-pointer touch-manipulation"
                   >
                     Join
                   </button>
@@ -65,7 +65,7 @@ export default function Home() {
                 <div className="mt-6 sm:mt-8">
                   <button
                     onClick={() => setIsJoinModalOpen(true)}
-                    className="px-6 sm:px-8 py-3 sm:py-4 bg-black text-white text-sm sm:text-base font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-2xl hover:shadow-black/50 transform hover:scale-105 border-2 border-gray-700 hover:border-gray-600 relative overflow-hidden"
+                    className="px-6 sm:px-8 py-3 sm:py-4 bg-black text-white text-sm sm:text-base font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-2xl hover:shadow-black/50 transform hover:scale-105 border-2 border-gray-700 hover:border-gray-600 relative overflow-hidden cursor-pointer touch-manipulation"
                     style={{
                       boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                     }}
@@ -149,7 +149,7 @@ export default function Home() {
 
             {/* Row 2 - Experiments and Labs */}
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
-              <div className="col-span-1 h-[900px] md:h-[700px]">
+              <div className="col-span-1 h-[1000px] md:h-[700px]">
                 <ExperimentsAndLabs />
               </div>
             </div>
