@@ -1434,7 +1434,14 @@ const JoinModal = ({ isOpen, onClose })=>{
             exit: {
                 opacity: 0
             },
-            className: "fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4",
+            className: "fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-start lg:items-center justify-center p-4 pt-16 lg:pt-4",
+            style: {
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0
+            },
             onClick: onClose,
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                 initial: {
@@ -1449,7 +1456,7 @@ const JoinModal = ({ isOpen, onClose })=>{
                     scale: 0.95,
                     opacity: 0
                 },
-                className: "bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto",
+                className: "bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative overflow-hidden max-h-[85vh] lg:max-h-[90vh] overflow-y-auto",
                 onClick: (e)=>e.stopPropagation(),
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1459,12 +1466,12 @@ const JoinModal = ({ isOpen, onClose })=>{
                             className: "h-4 w-4 text-gray-600"
                         }, void 0, false, {
                             fileName: "[project]/src/components/modals/JoinModal.tsx",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/modals/JoinModal.tsx",
-                        lineNumber: 31,
+                        lineNumber: 32,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1475,7 +1482,7 @@ const JoinModal = ({ isOpen, onClose })=>{
                                 children: "Join First Order"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/modals/JoinModal.tsx",
-                                lineNumber: 40,
+                                lineNumber: 41,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1486,20 +1493,20 @@ const JoinModal = ({ isOpen, onClose })=>{
                                         children: "Terminl"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/modals/JoinModal.tsx",
-                                        lineNumber: 42,
+                                        lineNumber: 43,
                                         columnNumber: 32
                                     }, this),
                                     " — a private AI-powered space for founders to connect, share, and build."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/modals/JoinModal.tsx",
-                                lineNumber: 41,
+                                lineNumber: 42,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/modals/JoinModal.tsx",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1515,18 +1522,18 @@ const JoinModal = ({ isOpen, onClose })=>{
                             className: "rounded-b-2xl"
                         }, void 0, false, {
                             fileName: "[project]/src/components/modals/JoinModal.tsx",
-                            lineNumber: 48,
+                            lineNumber: 49,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/modals/JoinModal.tsx",
-                        lineNumber: 47,
+                        lineNumber: 48,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/modals/JoinModal.tsx",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 11
             }, this)
         }, void 0, false, {
@@ -1902,7 +1909,7 @@ function Home() {
                                                 className: "flex items-center space-x-2 sm:space-x-3",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                     onClick: ()=>setIsJoinModalOpen(true),
-                                                    className: "px-2 sm:px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full hover:bg-orange-600 transition-all duration-300 shadow-sm",
+                                                    className: "px-2 sm:px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full hover:bg-orange-600 transition-all duration-300 shadow-sm cursor-pointer touch-manipulation",
                                                     children: "Join"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/page.tsx",
@@ -1985,7 +1992,7 @@ function Home() {
                                                     className: "mt-6 sm:mt-8",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                         onClick: ()=>setIsJoinModalOpen(true),
-                                                        className: "px-6 sm:px-8 py-3 sm:py-4 bg-black text-white text-sm sm:text-base font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-2xl hover:shadow-black/50 transform hover:scale-105 border-2 border-gray-700 hover:border-gray-600 relative overflow-hidden",
+                                                        className: "px-6 sm:px-8 py-3 sm:py-4 bg-black text-white text-sm sm:text-base font-bold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-2xl hover:shadow-black/50 transform hover:scale-105 border-2 border-gray-700 hover:border-gray-600 relative overflow-hidden cursor-pointer touch-manipulation",
                                                         style: {
                                                             boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                                                         },
@@ -2118,10 +2125,10 @@ function Home() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex flex-col lg:flex-row gap-3 sm:gap-4 h-[400px] lg:h-[380px]",
+                                    className: "flex flex-col lg:flex-row gap-3 sm:gap-4 h-[500px] lg:h-[380px]",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-full lg:w-[60%] h-full",
+                                            className: "w-full lg:w-[50%] h-full",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$FoundingPrinciples$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                                 fileName: "[project]/src/app/page.tsx",
                                                 lineNumber: 122,
@@ -2133,7 +2140,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-full lg:w-[35%] h-full",
+                                            className: "w-full lg:w-[50%] h-full",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$VibesBox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VibesBox"], {}, void 0, false, {
                                                 fileName: "[project]/src/app/page.tsx",
                                                 lineNumber: 125,
@@ -2218,7 +2225,7 @@ function Home() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "grid grid-cols-1 gap-3 sm:gap-4",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "col-span-1 h-[700px]",
+                                        className: "col-span-1 h-[1100px] md:h-[700px]",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ExperimentsLabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
                                             lineNumber: 153,

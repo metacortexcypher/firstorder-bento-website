@@ -117,11 +117,11 @@ export default function Home() {
             </div>
 
             {/* Row 1 - Founding Principles and Vibes Box - Stack on mobile, side by side on desktop */}
-            <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 h-[400px] lg:h-[380px]">
-              <div className="w-full lg:w-[60%] h-full">
+            <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 h-[500px] lg:h-[380px]">
+              <div className="w-full lg:w-[50%] h-full">
                 <FoundingPrinciples />
               </div>
-              <div className="w-full lg:w-[35%] h-full">
+              <div className="w-full lg:w-[50%] h-full">
                 <VibesBox />
               </div>
             </div>
