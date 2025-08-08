@@ -38,10 +38,8 @@ export const JoinModal = ({ isOpen, onClose }: JoinModalProps) => {
 
             {/* Header */}
             <div className="p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Join First Order</h2>
-              <p className="text-gray-600">
-                We're building <strong>Terminl</strong> — a private AI-powered space for founders to connect, share, and build.
-              </p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">Join First Order</h2>
+              <p className="text-sm text-gray-500 mb-3">(formerly frag.club)</p>
             </div>
 
             {/* Tally Form */}
