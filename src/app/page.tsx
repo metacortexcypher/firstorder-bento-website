@@ -149,7 +149,7 @@ export default function Home() {
 
             {/* Row 2 - Experiments and Labs */}
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
-              <div className="col-span-1 h-[1000px] md:h-[700px]">
+              <div className="col-span-1 h-[1100px] md:h-[700px]">
                 <ExperimentsAndLabs />
               </div>
             </div>
