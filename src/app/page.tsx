@@ -38,7 +38,7 @@ export default function Home() {
             </div>
             
             {/* Top Box - Main Brand - Now takes full height minus navigation */}
-            <div className="flex-1 min-h-[300px] sm:min-h-[400px] lg:min-h-0 rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8 flex flex-col justify-center relative overflow-hidden">
+            <div className="flex-1 min-h-[80vh] sm:min-h-[80vh] lg:min-h-0 rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8 flex flex-col justify-center relative overflow-hidden">
               {/* Background image */}
               <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80"
