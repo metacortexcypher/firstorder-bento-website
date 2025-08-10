@@ -52,7 +52,7 @@ maybe.`;
       {/* Compact View - Minimalistic Design */}
       <div 
         onClick={() => setIsOpen(true)}
-        className="group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-200/80 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-1 cursor-pointer overflow-hidden"
+        className="group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-300 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-xl cursor-pointer overflow-hidden"
       >
         {/* Subtle colored gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-amber-50/20 to-yellow-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
@@ -64,32 +64,37 @@ maybe.`;
         
         <div className="relative flex flex-col justify-center h-full space-y-3 z-10">
           <div className="flex items-center space-x-3">
-            <div className="w-1.5 h-1.5 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"></div>
-            <h3 className="font-semibold text-gray-900 text-sm tracking-wide">
+            <div className="w-1.5 h-1.5 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+            <h3 className="font-semibold text-gray-900 text-sm tracking-wide group-hover:text-orange-600 transition-colors duration-300">
               Memo from the Founder
             </h3>
           </div>
           
-          <p className="text-gray-600 text-sm leading-relaxed max-w-xs font-normal">
+          <p className="text-gray-600 text-sm leading-relaxed max-w-xs font-normal group-hover:text-gray-700 transition-colors duration-300">
             Raw thoughts, late-night rants, and honest reflections on building something different.
           </p>
           
-          <div className="flex items-center space-x-2 text-xs text-gray-400">
+          <div className="flex items-center space-x-2 text-xs text-gray-400 group-hover:text-orange-500 transition-colors duration-300">
             <span>Unfiltered</span>
-            <div className="w-1 h-1 bg-orange-300/60 rounded-full"></div>
+            <div className="w-1 h-1 bg-orange-300/60 rounded-full group-hover:bg-orange-400 transition-colors duration-300"></div>
             <span>2:17 AM</span>
+            <div className="w-1 h-1 bg-orange-300/60 rounded-full group-hover:bg-orange-400 transition-colors duration-300"></div>
+            <span className="text-orange-500 font-medium">Click to read →</span>
           </div>
         </div>
         
         {/* Enhanced icon with colored background */}
         <div className="relative z-10">
-          <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100/60 rounded-2xl flex items-center justify-center group-hover:from-orange-100 group-hover:to-amber-100 group-hover:border-orange-200/80 transition-all duration-300">
+          <div className="w-12 h-12 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100/60 rounded-2xl flex items-center justify-center group-hover:from-orange-100 group-hover:to-amber-100 group-hover:border-orange-200/80 group-hover:scale-110 transition-all duration-300">
             <FileText className="w-5 h-5 text-orange-400 group-hover:text-orange-500 transition-colors duration-300" />
           </div>
         </div>
         
         {/* Enhanced accent line with gradient */}
         <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-orange-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+        
+        {/* Subtle pulse animation to indicate clickability */}
+        <div className="absolute inset-0 rounded-2xl ring-2 ring-orange-300/0 group-hover:ring-orange-300/20 transition-all duration-300"></div>
       </div>
 
       {/* Full Screen Modal */}

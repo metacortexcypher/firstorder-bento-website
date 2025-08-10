@@ -212,7 +212,14 @@ const FoundingPrinciples = ()=>{
                     exit: {
                         opacity: 0
                     },
-                    className: "fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center p-2 sm:p-4",
+                    className: "fixed inset-0 bg-black bg-opacity-95 z-[9998] flex items-start lg:items-center justify-center p-2 sm:p-4 pt-16 lg:pt-4",
+                    style: {
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0
+                    },
                     onClick: ()=>setIsOpen(false),
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                         initial: {
@@ -230,7 +237,7 @@ const FoundingPrinciples = ()=>{
                         transition: {
                             duration: 0.3
                         },
-                        className: "relative bg-gray-900 border border-gray-700 rounded-lg w-full max-w-4xl h-full max-h-[95vh] sm:max-h-[90vh] shadow-2xl overflow-hidden",
+                        className: "relative bg-gray-900 border border-gray-700 rounded-lg w-full max-w-4xl h-full max-h-[85vh] lg:max-h-[90vh] shadow-2xl overflow-hidden",
                         onClick: (e)=>e.stopPropagation(),
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -243,21 +250,21 @@ const FoundingPrinciples = ()=>{
                                                 className: "w-2 sm:w-3 h-2 sm:h-3 bg-red-500 rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 86,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "w-2 sm:w-3 h-2 sm:h-3 bg-yellow-500 rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 87,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "w-2 sm:w-3 h-2 sm:h-3 bg-green-500 rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 88,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -265,13 +272,13 @@ const FoundingPrinciples = ()=>{
                                                 children: "founding_principles.txt"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 88,
+                                                lineNumber: 89,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -282,7 +289,7 @@ const FoundingPrinciples = ()=>{
                                                 className: "h-3 sm:h-4 w-3 sm:w-4 text-gray-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 94,
+                                                lineNumber: 95,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -290,19 +297,19 @@ const FoundingPrinciples = ()=>{
                                                 children: "ESC"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 96,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 91,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                lineNumber: 83,
+                                lineNumber: 84,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -320,14 +327,14 @@ const FoundingPrinciples = ()=>{
                                                         children: "$ cat"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 104,
+                                                        lineNumber: 105,
                                                         columnNumber: 23
                                                     }, this),
                                                     " founding_principles.txt"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 104,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -337,21 +344,21 @@ const FoundingPrinciples = ()=>{
                                                         children: "# First Order - Core Principles"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 108,
+                                                        lineNumber: 109,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         children: "# Last updated: " + new Date().toLocaleDateString()
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 109,
+                                                        lineNumber: 110,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         children: "# These are the beliefs that guide every decision we make"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 111,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -359,13 +366,13 @@ const FoundingPrinciples = ()=>{
                                                         children: "# Raw, opinionated, and uncompromising"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 111,
+                                                        lineNumber: 112,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 108,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -394,7 +401,7 @@ const FoundingPrinciples = ()=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                lineNumber: 125,
+                                                                lineNumber: 126,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -405,7 +412,7 @@ const FoundingPrinciples = ()=>{
                                                                         children: title.split('.')[1].trim()
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                        lineNumber: 129,
+                                                                        lineNumber: 130,
                                                                         columnNumber: 31
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -413,25 +420,25 @@ const FoundingPrinciples = ()=>{
                                                                         children: description
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                        lineNumber: 132,
+                                                                        lineNumber: 133,
                                                                         columnNumber: 31
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                lineNumber: 128,
+                                                                lineNumber: 129,
                                                                 columnNumber: 29
                                                             }, this)
                                                         ]
                                                     }, index, true, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 118,
+                                                        lineNumber: 119,
                                                         columnNumber: 27
                                                     }, this);
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 115,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -444,7 +451,7 @@ const FoundingPrinciples = ()=>{
                                                                 children: "# End of principles"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                lineNumber: 143,
+                                                                lineNumber: 144,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -452,7 +459,7 @@ const FoundingPrinciples = ()=>{
                                                                 children: '$ echo "Building clarity in chaos"'
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                lineNumber: 144,
+                                                                lineNumber: 145,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -460,13 +467,13 @@ const FoundingPrinciples = ()=>{
                                                                 children: "Building clarity in chaos"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 146,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 143,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -479,7 +486,7 @@ const FoundingPrinciples = ()=>{
                                                                     children: "About First Order:"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                    lineNumber: 150,
+                                                                    lineNumber: 151,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -487,7 +494,7 @@ const FoundingPrinciples = ()=>{
                                                                     children: "We think from first principles. We believe in first-order effects, where foundational truths create ripple impacts that shape everything that follows."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                    lineNumber: 151,
+                                                                    lineNumber: 152,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -495,18 +502,18 @@ const FoundingPrinciples = ()=>{
                                                                     children: "A founder's journey is full of chaos—ambiguity, uncertainty, and constant pivoting. First Order is here to bring some order to the journey. We cut through the noise with fundamental thinking, creating clarity where others see complexity."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                                    lineNumber: 155,
+                                                                    lineNumber: 156,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                            lineNumber: 149,
+                                                            lineNumber: 150,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 149,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -516,40 +523,40 @@ const FoundingPrinciples = ()=>{
                                                             children: "# Press ESC or click outside to close"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                            lineNumber: 164,
+                                                            lineNumber: 165,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                        lineNumber: 163,
+                                                        lineNumber: 164,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 142,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 103,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                    lineNumber: 101,
+                                    lineNumber: 102,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                                lineNumber: 100,
+                                lineNumber: 101,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/FoundingPrinciples.tsx",
-                        lineNumber: 74,
+                        lineNumber: 75,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
@@ -1001,21 +1008,24 @@ function ExperimentsAndLabs() {
                                     lineNumber: 117,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    href: "https://wa.me/919515018018",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
                                     className: "flex items-center space-x-2 text-sm font-medium text-black hover:text-gray-700 transition-colors group",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            children: "DM us on Telegram"
+                                            children: "DM us on WhatsApp"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ExperimentsLabs.tsx",
-                                            lineNumber: 121,
+                                            lineNumber: 126,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                             className: "h-4 w-4 group-hover:translate-x-1 transition-transform"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/ExperimentsLabs.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 127,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -1114,7 +1124,7 @@ maybe.`;
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 onClick: ()=>setIsOpen(true),
-                className: "group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-200/80 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-1 cursor-pointer overflow-hidden",
+                className: "group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-300 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-xl cursor-pointer overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-br from-orange-50/30 via-amber-50/20 to-yellow-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
@@ -1144,14 +1154,14 @@ maybe.`;
                                 className: "flex items-center space-x-3",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-1.5 h-1.5 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full"
+                                        className: "w-1.5 h-1.5 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full group-hover:scale-125 transition-transform duration-300"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FounderMemo.tsx",
                                         lineNumber: 67,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold text-gray-900 text-sm tracking-wide",
+                                        className: "font-semibold text-gray-900 text-sm tracking-wide group-hover:text-orange-600 transition-colors duration-300",
                                         children: "Memo from the Founder"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FounderMemo.tsx",
@@ -1165,7 +1175,7 @@ maybe.`;
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-600 text-sm leading-relaxed max-w-xs font-normal",
+                                className: "text-gray-600 text-sm leading-relaxed max-w-xs font-normal group-hover:text-gray-700 transition-colors duration-300",
                                 children: "Raw thoughts, late-night rants, and honest reflections on building something different."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
@@ -1173,7 +1183,7 @@ maybe.`;
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center space-x-2 text-xs text-gray-400",
+                                className: "flex items-center space-x-2 text-xs text-gray-400 group-hover:text-orange-500 transition-colors duration-300",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Unfiltered"
@@ -1183,7 +1193,7 @@ maybe.`;
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-1 h-1 bg-orange-300/60 rounded-full"
+                                        className: "w-1 h-1 bg-orange-300/60 rounded-full group-hover:bg-orange-400 transition-colors duration-300"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FounderMemo.tsx",
                                         lineNumber: 79,
@@ -1194,6 +1204,21 @@ maybe.`;
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FounderMemo.tsx",
                                         lineNumber: 80,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "w-1 h-1 bg-orange-300/60 rounded-full group-hover:bg-orange-400 transition-colors duration-300"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/FounderMemo.tsx",
+                                        lineNumber: 81,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-orange-500 font-medium",
+                                        children: "Click to read →"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/FounderMemo.tsx",
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this)
                                 ]
@@ -1211,29 +1236,36 @@ maybe.`;
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative z-10",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-12 h-12 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100/60 rounded-2xl flex items-center justify-center group-hover:from-orange-100 group-hover:to-amber-100 group-hover:border-orange-200/80 transition-all duration-300",
+                            className: "w-12 h-12 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100/60 rounded-2xl flex items-center justify-center group-hover:from-orange-100 group-hover:to-amber-100 group-hover:border-orange-200/80 group-hover:scale-110 transition-all duration-300",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2d$text$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FileText$3e$__["FileText"], {
                                 className: "w-5 h-5 text-orange-400 group-hover:text-orange-500 transition-colors duration-300"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
-                                lineNumber: 87,
+                                lineNumber: 89,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/FounderMemo.tsx",
-                            lineNumber: 86,
+                            lineNumber: 88,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/FounderMemo.tsx",
-                        lineNumber: 85,
+                        lineNumber: 87,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-orange-200/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"
                     }, void 0, false, {
                         fileName: "[project]/src/components/FounderMemo.tsx",
-                        lineNumber: 92,
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 rounded-2xl ring-2 ring-orange-300/0 group-hover:ring-orange-300/20 transition-all duration-300"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/FounderMemo.tsx",
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1286,7 +1318,7 @@ maybe.`;
                                 className: "absolute top-0 left-12 w-0.5 h-full bg-red-300/60"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
-                                lineNumber: 124,
+                                lineNumber: 129,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1296,12 +1328,12 @@ maybe.`;
                                     className: "h-5 w-5 text-gray-600"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FounderMemo.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 136,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
-                                lineNumber: 127,
+                                lineNumber: 132,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1313,47 +1345,47 @@ maybe.`;
                                         children: memoContent
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FounderMemo.tsx",
-                                        lineNumber: 137,
+                                        lineNumber: 142,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FounderMemo.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 141,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
-                                lineNumber: 135,
+                                lineNumber: 140,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-0 left-0 w-full h-6 bg-gradient-to-b from-black/5 to-transparent pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
-                                lineNumber: 144,
+                                lineNumber: 149,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/FounderMemo.tsx",
-                                lineNumber: 145,
+                                lineNumber: 150,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/FounderMemo.tsx",
-                        lineNumber: 105,
+                        lineNumber: 110,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/FounderMemo.tsx",
-                    lineNumber: 98,
+                    lineNumber: 103,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/FounderMemo.tsx",
-                lineNumber: 96,
+                lineNumber: 101,
                 columnNumber: 7
             }, this)
         ]
@@ -1434,7 +1466,7 @@ const JoinModal = ({ isOpen, onClose })=>{
                         className: "p-6 border-b border-gray-200",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-2xl font-bold text-gray-900 mb-2",
+                                className: "text-2xl font-bold text-gray-900 mb-1",
                                 children: "Join First Order"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/modals/JoinModal.tsx",
@@ -1442,19 +1474,9 @@ const JoinModal = ({ isOpen, onClose })=>{
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-gray-600",
-                                children: [
-                                    "We're building ",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                        children: "Terminl"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/modals/JoinModal.tsx",
-                                        lineNumber: 43,
-                                        columnNumber: 32
-                                    }, this),
-                                    " — a private AI-powered space for founders to connect, share, and build."
-                                ]
-                            }, void 0, true, {
+                                className: "text-sm text-gray-500 mb-3",
+                                children: "(formerly frag.club)"
+                            }, void 0, false, {
                                 fileName: "[project]/src/components/modals/JoinModal.tsx",
                                 lineNumber: 42,
                                 columnNumber: 15
@@ -1478,12 +1500,12 @@ const JoinModal = ({ isOpen, onClose })=>{
                             className: "rounded-b-2xl"
                         }, void 0, false, {
                             fileName: "[project]/src/components/modals/JoinModal.tsx",
-                            lineNumber: 49,
+                            lineNumber: 47,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/modals/JoinModal.tsx",
-                        lineNumber: 48,
+                        lineNumber: 46,
                         columnNumber: 13
                     }, this)
                 ]
@@ -1872,7 +1894,7 @@ function Home() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex-1 min-h-[300px] sm:min-h-[400px] lg:min-h-0 rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8 flex flex-col justify-center relative overflow-hidden",
+                                    className: "flex-1 min-h-[80vh] sm:min-h-[80vh] lg:min-h-0 rounded-2xl shadow-lg border border-gray-200 p-4 sm:p-6 lg:p-8 flex flex-col justify-center relative overflow-hidden",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-cover bg-center bg-no-repeat opacity-80",

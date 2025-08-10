@@ -117,10 +117,15 @@ export default function ExperimentsAndLabs() {
             <p className="text-sm text-gray-600">
               Wanna contribute or collab on one?
             </p>
-            <button className="flex items-center space-x-2 text-sm font-medium text-black hover:text-gray-700 transition-colors group">
-              <span>DM us on Telegram</span>
+            <a 
+              href="https://wa.me/919515018018" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-sm font-medium text-black hover:text-gray-700 transition-colors group"
+            >
+              <span>DM us on WhatsApp</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
