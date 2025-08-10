@@ -6,6 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const FounderMemo = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleOpen = () => {
+    // Capture the current scroll position when opening the modal
+    setScrollPosition(window.scrollY);
+    setIsOpen(true);
+  };
 
   const memoContent = `2:17 AM
 
@@ -51,7 +58,7 @@ maybe.`;
     <>
       {/* Compact View - Minimalistic Design */}
       <div 
-        onClick={() => setIsOpen(true)}
+        onClick={handleOpen}
         className="group relative flex items-center justify-between p-8 h-40 bg-white border border-orange-100/60 hover:border-orange-300 rounded-2xl transition-all duration-400 ease-out hover:-translate-y-2 hover:shadow-xl cursor-pointer overflow-hidden"
       >
         {/* Subtle colored gradient overlay */}
@@ -104,27 +111,34 @@ maybe.`;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 overflow-y-auto"
             onClick={() => setIsOpen(false)}
           >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-yellow-50 w-full max-w-4xl h-[90vh] rounded-lg shadow-2xl relative overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
+            <div 
+              className="min-h-screen flex items-start justify-center p-4 py-8"
               style={{
-                backgroundImage: `
-                  repeating-linear-gradient(
-                    transparent,
-                    transparent 31px,
-                    rgba(59, 130, 246, 0.1) 32px,
-                    rgba(59, 130, 246, 0.1) 32px
-                  )
-                `,
-                backgroundSize: '100% 32px'
+                paddingTop: `${Math.max(scrollPosition + 40, 40)}px`,
+                paddingBottom: '40px'
               }}
             >
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                className="bg-yellow-50 w-full max-w-4xl max-h-[85vh] rounded-lg shadow-2xl relative overflow-hidden"
+                onClick={(e) => e.stopPropagation()}
+                style={{
+                  backgroundImage: `
+                    repeating-linear-gradient(
+                      transparent,
+                      transparent 31px,
+                      rgba(59, 130, 246, 0.1) 32px,
+                      rgba(59, 130, 246, 0.1) 32px
+                    )
+                  `,
+                  backgroundSize: '100% 32px'
+                }}
+              >
               {/* Paper header with red margin line */}
               <div className="absolute top-0 left-12 w-0.5 h-full bg-red-300/60"></div>
               
@@ -149,6 +163,7 @@ maybe.`;
               <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-b from-black/5 to-transparent pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
             </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
