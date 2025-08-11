@@ -6,6 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export const FoundingPrinciples = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleOpen = () => {
+    // Capture the current scroll position when opening the modal
+    setScrollPosition(window.scrollY);
+    setIsOpen(true);
+  };
 
   const principles = [
     "1. Think from First Principles\nDon't copy. Break it down. Rebuild from truth.",
@@ -54,7 +61,7 @@ export const FoundingPrinciples = () => {
           </div>
         </div>
         <button
-          onClick={() => setIsOpen(true)}
+          onClick={handleOpen}
           className="p-2 sm:p-3 hover:bg-gray-800 rounded-full transition-all duration-200 cursor-pointer hover:scale-110 group-hover:bg-gray-800/50 border border-gray-700 flex-shrink-0"
         >
           <Plus className="h-4 sm:h-5 w-4 sm:w-5 text-green-400 group-hover:text-green-300 transition-colors duration-300" />
@@ -68,18 +75,24 @@ export const FoundingPrinciples = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-95 z-[9998] flex items-start lg:items-center justify-center p-2 sm:p-4 pt-16 lg:pt-4"
-            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-95 z-[9998] overflow-y-auto"
             onClick={() => setIsOpen(false)}
           >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="relative bg-gray-900 border border-gray-700 rounded-lg w-full max-w-4xl h-full max-h-[85vh] lg:max-h-[90vh] shadow-2xl overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
+            <div 
+              className="min-h-screen flex items-start justify-center p-2 sm:p-4"
+              style={{
+                paddingTop: `${Math.max(scrollPosition + 40, 40)}px`,
+                paddingBottom: '40px'
+              }}
             >
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.95, opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="relative bg-gray-900 border border-gray-700 rounded-lg w-full max-w-4xl max-h-[85vh] shadow-2xl flex flex-col"
+                onClick={(e) => e.stopPropagation()}
+              >
               {/* Terminal header bar */}
               <div className="flex items-center justify-between p-3 sm:p-4 border-b border-gray-700 bg-gray-800 flex-shrink-0">
                 <div className="flex items-center space-x-2">
@@ -98,7 +111,7 @@ export const FoundingPrinciples = () => {
               </div>
 
               {/* Scrollable terminal content */}
-              <div className="h-full overflow-y-auto bg-gray-900 font-mono">
+              <div className="flex-1 overflow-y-auto bg-gray-900 font-mono">
                 <div className="p-4 sm:p-6 lg:p-8 pb-8 sm:pb-12 lg:pb-16">
                   <div className="space-y-4 sm:space-y-6">
                     <div className="text-green-400 text-lg sm:text-xl mb-6 sm:mb-8">
@@ -171,6 +184,7 @@ export const FoundingPrinciples = () => {
                 </div>
               </div>
             </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

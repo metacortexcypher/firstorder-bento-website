@@ -125,7 +125,7 @@ maybe.`;
                 initial={{ scale: 0.95, opacity: 0, y: 20 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 exit={{ scale: 0.95, opacity: 0, y: 20 }}
-                className="bg-yellow-50 w-full max-w-4xl max-h-[85vh] rounded-lg shadow-2xl relative overflow-hidden"
+                className="bg-yellow-50 w-full max-w-4xl max-h-[85vh] rounded-lg shadow-2xl relative flex flex-col"
                 onClick={(e) => e.stopPropagation()}
                 style={{
                   backgroundImage: `
@@ -151,7 +151,7 @@ maybe.`;
               </button>
 
               {/* Content */}
-              <div className="h-full overflow-y-auto p-8 pl-20">
+              <div className="flex-1 overflow-y-auto p-8 pl-20">
                 <div className="max-w-3xl">
                   <pre className="font-mono text-sm leading-relaxed text-gray-800 whitespace-pre-wrap break-words">
                     {memoContent}
