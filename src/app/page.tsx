@@ -92,16 +92,12 @@ export default function Home() {
                 <div className="flex items-center space-x-2">
                   <div className="flex space-x-2">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/company/frag-club"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-3 py-1.5 bg-blue-500 text-white text-xs font-medium rounded-full hover:bg-blue-600 transition-colors"
                     >
                       LinkedIn
-                    </a>
-                    <a
-                      href="#"
-                      className="px-3 py-1.5 bg-black text-white text-xs font-medium rounded-full hover:bg-gray-800 transition-colors"
-                    >
-                      X
                     </a>
                   </div>
                 </div>
@@ -147,6 +143,30 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Luma Calendar Section */}
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              <div className="col-span-1">
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 relative overflow-hidden h-[500px] flex flex-col">
+                  <div className="text-center mb-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Upcoming Events</h3>
+                    <p className="text-sm text-gray-600">Join us for our next gathering</p>
+                  </div>
+                  <div className="relative rounded-2xl overflow-hidden bg-gray-100 flex-1">
+                    <iframe
+                      src="https://lu.ma/embed/event/evt-jAbHv4ttQpy10AW/simple"
+                      width="100%"
+                      height="100%"
+                      style={{ border: "1px solid #bfcbda88", borderRadius: "8px" }}
+                      allow="fullscreen; payment"
+                      aria-hidden="false"
+                      tabIndex={0}
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Row 2 - Experiments and Labs */}
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
               <div className="col-span-1 h-[1100px] md:h-[700px]">
@@ -167,16 +187,12 @@ export default function Home() {
                 <div className="text-center space-y-3">
                   <div className="flex justify-center space-x-2">
                     <a
-                      href="#"
+                      href="https://www.linkedin.com/company/frag-club"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-3 py-1.5 bg-blue-500 text-white text-xs font-medium rounded-full hover:bg-blue-600 transition-colors"
                     >
                       LinkedIn
-                    </a>
-                    <a
-                      href="#"
-                      className="px-3 py-1.5 bg-black text-white text-xs font-medium rounded-full hover:bg-gray-800 transition-colors"
-                    >
-                      X
                     </a>
                   </div>
                   <p className="text-xs text-gray-600 font-medium">Built from Hyderabad ❤️</p>

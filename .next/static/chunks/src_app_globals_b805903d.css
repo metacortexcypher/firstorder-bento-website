@@ -795,10 +795,6 @@
     height: 60px;
   }
 
-  .h-\[90vh\] {
-    height: 90vh;
-  }
-
   .h-\[160px\] {
     height: 160px;
   }
@@ -1970,6 +1966,10 @@
 
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
   }
 
   .pt-4 {
