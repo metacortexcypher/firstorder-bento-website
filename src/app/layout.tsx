@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "First Order - A New Order Begins | Startup Community for Founders",
@@ -129,7 +130,10 @@ export default function RootLayout({
           data-only-in-iframe="true"
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
-        />{children}</body>
+        />
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

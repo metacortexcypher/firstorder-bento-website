@@ -143,30 +143,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Luma Calendar Section */}
-            <div className="grid grid-cols-1 gap-3 sm:gap-4">
-              <div className="col-span-1">
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 relative overflow-hidden h-[500px] flex flex-col">
-                  <div className="text-center mb-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Upcoming Events</h3>
-                    <p className="text-sm text-gray-600">Join us for our next gathering</p>
-                  </div>
-                  <div className="relative rounded-2xl overflow-hidden bg-gray-100 flex-1">
-                    <iframe
-                      src="https://lu.ma/embed/event/evt-jAbHv4ttQpy10AW/simple"
-                      width="100%"
-                      height="100%"
-                      style={{ border: "1px solid #bfcbda88", borderRadius: "8px" }}
-                      allow="fullscreen; payment"
-                      aria-hidden="false"
-                      tabIndex={0}
-                      className="w-full h-full"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Row 2 - Experiments and Labs */}
             <div className="grid grid-cols-1 gap-3 sm:gap-4">
               <div className="col-span-1 h-[1100px] md:h-[700px]">
